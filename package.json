@@ -1,0 +1,17 @@
+{
+  "name": "a11y-testing-example",
+  "version": "1.0.0",
+  "description": "This repo exist to demonstrate an approach to accesibility testing using Github actions and Pa11y",
+  "main": "serve.js",
+  "scripts": {
+    "serve": "sirv site --single --port 5000 & wait-on http://localhost:5000/good.html",
+    "a11y": "npm run serve && pa11y-ci --config .pa11yrc --json > a11y-report.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pa11y-ci": "^2.4.2",
+    "sirv-cli": "^1.0.14",
+    "wait-on": "^6.0.0"
+  }
+}

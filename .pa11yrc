@@ -1,0 +1,17 @@
+{
+  "defaults": {
+    "reporters":[
+      "pa11y-reporter-html","json"
+    ]
+  },
+  "urls": [
+      {
+        "url":"http://localhost:5000/good.html",
+        "wait":1000
+      },
+      {
+        "url":"http://localhost:5000/bad.html",
+        "wait":1000
+      }
+  ]
+}
