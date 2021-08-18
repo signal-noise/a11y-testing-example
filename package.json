@@ -5,7 +5,8 @@
   "main": "serve.js",
   "scripts": {
     "serve": "sirv site --single --port 5000 & wait-on http://localhost:5000/good.html",
-    "a11y": "npm run serve && pa11y-ci --config .pa11yrc --json > a11y-report.json"
+    "a11y": "pa11y-ci --config .pa11yrc --json > a11y-report.json",
+    "test": "npm run serve && npm run a11y"
   },
   "author": "",
   "license": "ISC",
