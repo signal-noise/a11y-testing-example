@@ -13,7 +13,23 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: Run pa11y
+      - name: Checkout PR branch
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Serve the site
         run: |
           npm i
-          npm test
+          npm run serve
+      - name: A11y test
+        run: |
+          npm run a11y
+      - name: Commit report
+        if: ${{ always() }}
+        run: |
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          timestamp=$(date -u)
+          git commit -m "Accessibility report: ${timestamp}" || exit 0
+          git push
