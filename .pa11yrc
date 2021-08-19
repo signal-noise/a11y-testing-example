@@ -1,9 +1,4 @@
 {
-  "defaults": {
-    "reporters":[
-      "pa11y-reporter-html","json"
-    ]
-  },
   "urls": [
       {
         "url":"http://localhost:5000/good.html",
