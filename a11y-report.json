@@ -1,0 +1,1 @@
+{"total":2,"passes":0,"errors":0,"results":{"http://localhost:5000/good.html":[{"message":"Pa11y timed out (30000ms)"}],"http://localhost:5000/bad.html":[{"message":"Pa11y timed out (30000ms)"}]}}
