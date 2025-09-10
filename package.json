@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "pa11y-ci": "^2.4.2",
-    "sirv-cli": "^1.0.14",
+    "sirv-cli": "^3.0.0",
     "wait-on": "^6.0.0"
   }
 }
